@@ -11,8 +11,5 @@ def contacto_view(request):
     return render (request, "app/contacto.html",)
 
 
-def blog_view(request):
-    return render (request, "app/blog.html",)
-
 def tienda_view(request):
     return render (request, "app/tienda.html",)

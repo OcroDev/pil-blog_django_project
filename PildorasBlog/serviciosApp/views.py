@@ -9,4 +9,4 @@ def servicios_view(request):
     context = {
         'servicios' : servicio,
     }
-    return render (request, "app/servicios.html", context)
+    return render (request, "app_servicios/servicios.html", context)
