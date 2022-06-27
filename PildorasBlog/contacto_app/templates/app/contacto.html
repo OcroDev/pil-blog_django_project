@@ -1,0 +1,12 @@
+{% extends 'app/base.html' %} {% load static %}
+
+{%block contenido%}
+{% load crispy_forms_tags %}
+<form action="" method="POST">
+    {% csrf_token %}
+    {{ formulario | crispy }}
+
+    <input type="submit" class="btn-primary" value="enviar">
+</form>
+
+{% endblock %}

@@ -29,15 +29,15 @@
 
 {% endfor %}
 <section>
-    <div style="margin:auto; text-align:center; width: 75%; color:white;">
+    <div style="margin:auto; text-align:center; width: 75%; ">
     
+        <p style="color: white">
            Categorias: | {% for post in posts %}
                 {% for categoria in post.categoria.all%}
-                <a href="{% url 'categorias' categoria.id%} " class="linkCategorias" > 
-                    {{categoria.nombre}} </a> |
+                    {{categoria.nombre}}  |
                 {% endfor %}
             {% endfor %}
-       
+         </p>
     
     </div>
 </section>

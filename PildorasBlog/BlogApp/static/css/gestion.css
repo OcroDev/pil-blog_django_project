@@ -16,6 +16,15 @@ h6 {
   font-family: "Raleway";
 }
 
+.linkCategorias{
+    color:#43b317;
+    text-decoration: none;
+}
+.linkCategorias:hover{
+    color: white;
+    text-decoration: none;
+}
+
 p {
   line-height: 1.75;
 }
