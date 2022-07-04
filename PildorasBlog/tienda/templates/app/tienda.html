@@ -1,0 +1,22 @@
+{% extends 'app/base.html' %} {% load static %}
+
+{%block contenido%}
+
+
+
+<section class="row">
+    {% for producto in productos %}
+    <div class="card" style="width: 18rem; margin:20px;">
+        <img class="card-img-top" src="{{producto.imagen.url}}" alt="Card image cap">
+        <hr>
+        <div class="card-body">
+            <h5 class="card-title"><strong>{{producto.nombre}}</strong></h5>
+            <p class="card-text">Precio: $ {{producto.precio}}</p>
+            <a href="#" class="btn btn-primary">Add</a>
+        </div>
+    </div>
+    {% endfor %}
+</section>
+
+
+{% endblock %}

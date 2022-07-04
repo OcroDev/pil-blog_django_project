@@ -6,7 +6,6 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('', views.home_view, name='home'),
-    path('tienda/', views.tienda_view, name='tienda'),
 ]
 
 #indica a django donde se guardaron las imagenes de las bases de datos
