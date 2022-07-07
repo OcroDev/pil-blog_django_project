@@ -9,5 +9,4 @@ def tienda_view(request):
     context={
         "productos": producto
     }
-    
     return render (request, "app/tienda.html", context)
