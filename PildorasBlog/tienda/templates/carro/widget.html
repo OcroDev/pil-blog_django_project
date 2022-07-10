@@ -1,4 +1,7 @@
-<table class="table table-bordered" style="color: white">
+<table
+  class="table table-bordered"
+  style="color: white; background-color: rgb(6, 51, 6); margin-top: 20px"
+>
   <thead>
     <tr>
       <th colspan="3" class="text-center">Carro compras</th>
@@ -28,10 +31,23 @@
           class="btn btn-sm btn-success"
           >-</a
         >
+        <a
+          href="{% url 'carro:eliminar' value.producto_id %}"
+          class="btn btn-sm btn-danger"
+          >x</a
+        >
         {{value.producto_precio}} $
       </td>
     </tr>
-    {% endfor %} {% else %}
+    {% endfor %}
+    <tr class="text-center">
+      <td colspan="3">
+        <a href="{% url 'carro:limpiar' %}" class="btn btn-sm btn-danger"
+          >Vaciar Carro</a
+        >
+      </td>
+    </tr>
+    {% else %}
     <tr>
       <td colspan="3">
         <div class="alert alert-danger text-center">sin productos</div>
