@@ -18,7 +18,7 @@ class CategoriaProducto(models.Model):
         return self.nombre
 
 class Producto(models.Model):
-    nombre= models.CharField(max_length=60)
+    nombre = models.CharField(max_length=60)
     categorias= models.ForeignKey(CategoriaProducto, on_delete=models.CASCADE)
     imagen= models.ImageField(upload_to="tienda", null=True, blank=True)
     precio = models.FloatField()

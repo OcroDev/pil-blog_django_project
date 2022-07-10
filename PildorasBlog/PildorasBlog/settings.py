@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'tienda',
     'carro_compras',
+
 ]
 
 MIDDLEWARE = [
@@ -70,6 +71,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'carro_compras.context_processor.importe_total_carro'
             ],
         },
     },

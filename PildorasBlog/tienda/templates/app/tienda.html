@@ -1,6 +1,7 @@
 {% extends 'app/base.html' %} {% load static %} {%block contenido%}
 
 <div class="container">
+  <div style="float: right">{% include "carro/widget.html" %}</div>
   <div class="row">
     {% for producto in productos %}
     <div class="col-md-3">
@@ -14,7 +15,13 @@
         <div class="card-body">
           <h5 class="card-title"><strong>{{producto.nombre}}</strong></h5>
           <p class="card-text">Precio: $ {{producto.precio}}</p>
-          <a href="#" class="btn btn-primary">Add</a>
+        </div>
+        <div class="card-footer text-center d-flex" style="width: 80%">
+          <a
+            href="{% url 'carro:agregar' producto.id %}"
+            class="btn btn-success"
+            >Añadir al carro</a
+          >
         </div>
       </div>
     </div>
