@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     'blog_app',
     'contacto_app',
     'crispy_forms',
-    'tienda'
+    'tienda',
     'carro_compras',
 ]
 
