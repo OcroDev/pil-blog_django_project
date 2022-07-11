@@ -137,17 +137,21 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+
+
 #configuración de Email
 
 EMAIL_BACKEND="django.core.mail.backends.smtp.EmailBackend"
-EMAIL_HOST = "smtp.gmail.com"
-EMAIL_USE_TLS = True
+EMAIL_HOST = "smtp.gmail.com" #puede variar según el tipo de correo que se utiliza, en este caso es para
+EMAIL_USE_TLS = True                  # correos del tipo gmail          
 EMAIL_PORT=587
-EMAIL_HOST_USER="rohermy.ochoa@uedonbosco.com"
-EMAIL_HOST_PASSWORD="Ro33921335"
+EMAIL_HOST_USER="prueba@gmail.com" #correo desde donde se envía la informacion
+EMAIL_HOST_PASSWORD="123456789" #contraseña
 
+#uso de crispy forms en bootstrap
 CRISPY_TEMPLATE_PACK='bootstrap4'
 
+#mensajes de error e info
 MESSAGE_TAGS = {
     mensajes_de_error.DEBUG:'degub',
     mensajes_de_error.INFO:'info',
