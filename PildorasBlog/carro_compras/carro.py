@@ -13,7 +13,7 @@ class Carro:
                 "producto_id":producto.id,
                 "producto_nombre":producto.nombre,
                 "producto_precio":str(producto.precio),
-                "producto_precio_base":str(producto.precio),
+                #"producto_precio_base":str(producto.precio),
                 "producto_cantidad":1,
                 "imagen":producto.imagen.url
             }

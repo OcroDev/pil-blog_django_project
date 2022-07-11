@@ -59,8 +59,15 @@
   <tfoot>
     <tr>
       <td colspan="3">
-        <p style="color: white">Total: {{importe_total_carro}} $</p>
+        <p style="color: white">Total: {{ importe_total_carro }} $</p>
       </td>
     </tr>
+    {% if request.session.carro.items %}
+    <tr class="text-center">
+      <td colspan="3">
+        <a href="../pedidos" class="btn btn-success">Realizar Pedido</a>
+      </td>
+    </tr>
+    {% endif %}
   </tfoot>
 </table>

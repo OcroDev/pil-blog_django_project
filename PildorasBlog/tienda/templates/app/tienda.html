@@ -1,7 +1,15 @@
 {% extends 'app/base.html' %} {% load static %} {%block contenido%}
 
 <div class="container">
+  {% if request.user.is_authenticated %}
   <div style="float: right">{% include "carro/widget.html" %}</div>
+  {% else %}
+  <span
+    class="alert alert-danger text-center"
+    style="float: right; margin-top: 20px"
+    >login para ver carro</span
+  >
+  {%endif%}
   <div class="row">
     {% for producto in productos %}
     <div class="col-md-3">

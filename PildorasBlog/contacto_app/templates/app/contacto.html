@@ -1,27 +1,28 @@
-{% extends 'app/base.html' %} {% load static %}
+{% extends 'app/base.html' %} {% load static %} {%block contenido%}
 
-{%block contenido%}
-{% load crispy_forms_tags %}
-
-<div class="row">
+<div class="contenido">
+  <div class="row">
     <div class="col-12 col-md-6 offset-md-3">
-        {% if "valido" in request.GET %}
-        <p style="color:white">información enviada</p>
-        {% endif %}
-        <div class="card" style="margin-top: 5%; margin-bottom: 5% ;">
-            <div class="card-body">
-                <h2>Contactanos </h2>
-                <hr>
-                <form action="" method="POST" class="labelform">
-                    {% csrf_token %}
-                    {{ formulario | crispy }}
-
-                    <input type="submit" class="btn-primary" value="enviar">
-                </form>
+      {% if "valido" in request.GET %}
+      <p style="color: white">información enviada</p>
+      {% endif %}
+      <div class="card" style="margin-top: 5%; margin-bottom: 5%">
+        <div class="card-body">
+          <h2>Contactanos</h2>
+          <hr />
+          {% load crispy_forms_tags %}
+          <form action="" method="POST">
+            {% csrf_token %} {{form|crispy}}
+            <div class="d-flex justify-content-end">
+              <button type="submit" class="btn btn-primary" value="enviar">
+                enviar
+              </button>
             </div>
+          </form>
         </div>
+      </div>
     </div>
+  </div>
 </div>
-
 
 {% endblock %}

@@ -6,7 +6,7 @@ from django.core.mail import EmailMessage
 def contacto_view(request):
     formulario = FormularioContacto()
     context = {
-        'formulario':formulario
+        'form':formulario
     }
 
     if request.method=="POST":

@@ -37,22 +37,32 @@
             <div class="card-body">
               <h3>Login Here</h3>
               <hr />
-
+              {%if messages %}
+              <br />
+              {% for mensaje in messages%}
+              <span class="alert alert-{{mensaje.tags}}">{{mensaje}} </span
+              ><br /><br />
+              {% endfor %} {% endif %}
               <form action="" method="post">
                 {% csrf_token %} {{form | crispy}}
                 <br />
                 <div class="d-flex flex-wrap">
-                  <a style="text-decoration: none; color: darkblue" href="#"
+                  <a
+                    style="text-decoration: none; color: darkblue"
+                    href="{% url 'home' %}"
                     >go to home</a
                   >&nbsp; | &nbsp;
-                  <a style="text-decoration: none; color: darkblue" href="#"
-                    >sign up</a
+                  <a
+                    style="text-decoration: none; color: darkblue"
+                    href="{% url 'registro' %}"
+                    >Registrate</a
                   >
                 </div>
-
                 <br />
                 <div class="d-flex justify-content-end">
-                  <input type="submit" value="Log in" class="btn btn-success" />
+                  <button type="submit" value="Log in" class="btn btn-success">
+                    Iniciar Sesión
+                  </button>
                 </div>
               </form>
             </div>
