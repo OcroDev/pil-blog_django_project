@@ -10,13 +10,13 @@ todas las acciones de la pagina tienda, especificamente el manejo del carro
 
 # Antes de empezar se deben instalar los plugins (o dependencias) del archivo requirements.txt
 
-# Además se deben cambiar los valores de las constantes
+# Además se deben cambiar los valores de las constantes en  el archivo settings.py
  EMAIL_HOST_USER="prueba@gmail.com"
  EMAIL_HOST_PASSWORD="123456789"
  Y cambiar el correo del usuario admin que es donde recibiras el pedido por correo electronico
 
 #Los valores establecidos para el envío de correos unicamente funciona con GMAIL, 
-de tener otro tipo de correo debes arreglar:
+de tener otro tipo de correo debes arreglar (settings.py):
 
  EMAIL_HOST = "smtp.gmail.com"
  EMAIL_USE_TLS = True
